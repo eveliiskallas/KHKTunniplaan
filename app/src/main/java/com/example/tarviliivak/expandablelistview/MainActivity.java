@@ -31,35 +31,43 @@ public class MainActivity extends AppCompatActivity {
         listDataHeader = new ArrayList<>();
         listHash = new HashMap<>();
 
-        listDataHeader.add("EDMTDev");
-        listDataHeader.add("Android");
-        listDataHeader.add("XAMARIN");
-        listDataHeader.add("UWP");
+        listDataHeader.add("Esmaspäev");
+        listDataHeader.add("Teisipäev");
+        listDataHeader.add("Kolmapäev");
+        listDataHeader.add("Neljapäev");
+        listDataHeader.add("Reede");
 
         List<String> edmtDev = new ArrayList<>();
-        edmtDev.add("This is Expandable Listview");
+        edmtDev.add("Tund 1");
+        edmtDev.add("Tund 2");
+        edmtDev.add("Tund 3");
+        edmtDev.add("Tund 4");
 
         List<String> androidStudio = new ArrayList<>();
-        androidStudio.add("Expandable ListView");
-        androidStudio.add("Google Map");
-        androidStudio.add("Chat App");
-        androidStudio.add("Firebase");
+        androidStudio.add("Tund 1");
+        androidStudio.add("Tund 2");
+        androidStudio.add("Tund 3");
+        androidStudio.add("Tund 4");
 
         List<String> xamarin = new ArrayList<>();
-        xamarin.add("Xamarin Expandable ListView");
-        xamarin.add("Xamarin Google Map");
-        xamarin.add("Xamarin Chat App");
-        xamarin.add("Xamarin Firebase");
+        xamarin.add("Tund 1");
+        xamarin.add("Tund 2");
+        xamarin.add("Tund 3");
 
         List<String> uwp = new ArrayList<>();
-        uwp.add("Uwp Expandable ListView");
-        uwp.add("Uwp Google Map");
-        uwp.add("Uwp Chat App");
-        uwp.add("Uwp Firebase");
+        uwp.add("Tund 1");
+        uwp.add("Tund 2");
+
+        List<String> tund = new ArrayList<>();
+        tund.add("Tund 1");
+        tund.add("Tund 2");
+        tund.add("Tund 3");
+        tund.add("Tund 4");
 
         listHash.put(listDataHeader.get(0), edmtDev);
         listHash.put(listDataHeader.get(1), androidStudio);
         listHash.put(listDataHeader.get(2), xamarin);
         listHash.put(listDataHeader.get(3), uwp);
+        listHash.put(listDataHeader.get(4), tund);
     }
 }
