@@ -2,6 +2,8 @@ package com.example.tarviliivak.expandablelistview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -9,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         listView = (ExpandableListView)findViewById(R.id.lvExp);
         initData();
