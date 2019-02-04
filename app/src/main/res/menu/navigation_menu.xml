@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_account"
-        android:title="My Account">
-
-    </item>
-
-    <item android:id="@+id/nav_settings"
-        android:title="Settings">
-
-    </item>
-
-    <item android:id="@+id/nav_logout"
-        android:title="Log Out">
-
-    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_timetable"
+            android:title="@string/timetable" />
+        <item
+            android:id="@+id/nav_student"
+            android:title="@string/student" />
+        <item
+            android:id="@+id/nav_groups"
+            android:title="@string/group" />
+        <item
+            android:id="@+id/nav_teachers"
+            android:title="@string/teacher" />
+        <item
+            android:id="@+id/nav_rooms"
+            android:title="@string/room" />
+    </group>
 
 </menu>

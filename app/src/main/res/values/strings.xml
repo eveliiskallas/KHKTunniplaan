@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tartu KHK</string>
+    <string name="timetable">Tunniplaan</string>
+    <string name="student">Õpilased</string>
+    <string name="group">Õppegrupid</string>
+    <string name="teacher">Õpetajad</string>
+    <string name="room">Ruumid</string>
 </resources>
