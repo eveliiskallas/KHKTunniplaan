@@ -5,4 +5,5 @@
     <string name="group">Õppegrupid</string>
     <string name="teacher">Õpetajad</string>
     <string name="room">Ruumid</string>
+    <string name="action_settings">Sätted</string>
 </resources>
