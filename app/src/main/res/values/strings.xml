@@ -7,4 +7,6 @@
     <string name="room">Ruumid</string>
     <string name="action_settings">Sätted</string>
     <string name="object">ÕPILASED</string>
+    <string name="Close">Close</string>
+    <string name="Open">Open</string>
 </resources>
