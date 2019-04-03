@@ -29,9 +29,9 @@ public class Settings extends AppCompatActivity {
 
 
     private ExpandableListView listView;
-    private ExpandableListAdapter listAdapter;
-    private List<String> listDataHeader;
-    private HashMap<String, List<String>> listHash;
+//    private ExpandableListAdapter listAdapter;
+//    private List<String> listDataHeader;
+//    private HashMap<String, List<String>> listHash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,9 +78,9 @@ public class Settings extends AppCompatActivity {
 
 
         listView = (ExpandableListView) findViewById(R.id.lvExp);
-        initData();
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
-        listView.setAdapter(listAdapter);
+//        initData();
+//        listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
+//        listView.setAdapter(listAdapter);
     }
 
     @Override
@@ -91,21 +91,21 @@ public class Settings extends AppCompatActivity {
     }
 
 
-    private void initData() {
-        listDataHeader = new ArrayList<>();
-        listHash = new HashMap<>();
-
-        listDataHeader.add("Seaded");
-
-
-        List<String> edmtDev = new ArrayList<>();
-        edmtDev.add("Tund 1");
-        edmtDev.add("Tund 2");
-        edmtDev.add("Tund 3");
-        edmtDev.add("Tund 4");
-
-        listHash.put(listDataHeader.get(0), edmtDev);
-    }
+//    private void initData() {
+//        listDataHeader = new ArrayList<>();
+//        listHash = new HashMap<>();
+//
+//        listDataHeader.add("Seaded");
+//
+//
+//        List<String> edmtDev = new ArrayList<>();
+//        edmtDev.add("Tund 1");
+//        edmtDev.add("Tund 2");
+//        edmtDev.add("Tund 3");
+//        edmtDev.add("Tund 4");
+//
+//        listHash.put(listDataHeader.get(0), edmtDev);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
