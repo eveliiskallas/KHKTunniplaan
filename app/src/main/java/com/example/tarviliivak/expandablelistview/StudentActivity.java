@@ -79,12 +79,12 @@ public class StudentActivity extends AppCompatActivity {
         listView.setAdapter(listAdapter);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (t.onOptionsItemSelected(item))
-            return true;
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (t.onOptionsItemSelected(item))
+//            return true;
+//        return super.onOptionsItemSelected(item);
+//    }
 
 
     private void initData() {
@@ -104,11 +104,22 @@ public class StudentActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.navigation_menu, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings: {
+                Intent i = new Intent(StudentActivity.this, Settings.class);
+                startActivity(i);
+            }
+        }
+        return true;
+    }
 }
 

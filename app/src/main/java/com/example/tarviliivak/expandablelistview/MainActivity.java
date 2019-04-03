@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
@@ -79,12 +80,13 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(listAdapter);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (t.onOptionsItemSelected(item))
-            return true;
-            return super.onOptionsItemSelected(item);
-    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (t.onOptionsItemSelected(item))
+//            return true;
+//            return super.onOptionsItemSelected(item);
+//    }
 
 
     private void initData() {
@@ -131,11 +133,25 @@ public class MainActivity extends AppCompatActivity {
         listHash.put(listDataHeader.get(4), tund);
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.navigation_menu, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings: {
+                Intent i = new Intent(MainActivity.this, Settings.class);
+                startActivity(i);
+            }
+        }
+        return true;
+    }
 }
+
+
+
 

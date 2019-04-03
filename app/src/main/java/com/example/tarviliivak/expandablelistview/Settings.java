@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class RoomActivity extends AppCompatActivity {
+public class Settings extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle t;
@@ -50,20 +50,24 @@ public class RoomActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_student:
-                        Intent intent = new Intent(RoomActivity.this, StudentActivity.class);
+                        Intent intent = new Intent(Settings.this, StudentActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.nav_teachers:
-                        Intent intent1 = new Intent(RoomActivity.this, TeacherActivity.class);
+                        Intent intent1 = new Intent(Settings.this, TeacherActivity.class);
                         startActivity(intent1);
                         break;
-                    case R.id.nav_timetable:
-                        Intent intent2 = new Intent(RoomActivity.this, MainActivity.class);
+                    case R.id.nav_groups:
+                        Intent intent2 = new Intent(Settings.this, GroupActivity.class);
                         startActivity(intent2);
                         break;
-                    case R.id.nav_groups:
-                        Intent intent3 = new Intent(RoomActivity.this, GroupActivity.class);
+                    case R.id.nav_timetable:
+                        Intent intent3 = new Intent(Settings.this, MainActivity.class);
                         startActivity(intent3);
+                        break;
+                    case R.id.nav_rooms:
+                        Intent intent4 = new Intent(Settings.this, RoomActivity.class);
+                        startActivity(intent4);
                     default:
                         return true;
                 }
@@ -79,46 +83,34 @@ public class RoomActivity extends AppCompatActivity {
         listView.setAdapter(listAdapter);
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (t.onOptionsItemSelected(item))
-//            return true;
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (t.onOptionsItemSelected(item))
+            return true;
+        return super.onOptionsItemSelected(item);
+    }
 
 
     private void initData() {
         listDataHeader = new ArrayList<>();
         listHash = new HashMap<>();
 
-        listDataHeader.add("Klass");
+        listDataHeader.add("Seaded");
+
 
         List<String> edmtDev = new ArrayList<>();
-        edmtDev.add("Info 1");
-        edmtDev.add("Info 2");
-        edmtDev.add("Info 3");
-        edmtDev.add("Info 4");
-
+        edmtDev.add("Tund 1");
+        edmtDev.add("Tund 2");
+        edmtDev.add("Tund 3");
+        edmtDev.add("Tund 4");
 
         listHash.put(listDataHeader.get(0), edmtDev);
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.settings, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings: {
-                Intent i = new Intent(RoomActivity.this, Settings.class);
-                startActivity(i);
-            }
-        }
         return true;
     }
 }
