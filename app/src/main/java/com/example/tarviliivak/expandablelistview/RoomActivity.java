@@ -53,7 +53,7 @@ public class RoomActivity extends AppCompatActivity {
                         Intent intent = new Intent(RoomActivity.this, StudentActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_teachers:
+                    case R.id.nav_teacher:
                         Intent intent1 = new Intent(RoomActivity.this, TeacherActivity.class);
                         startActivity(intent1);
                         break;
@@ -61,9 +61,13 @@ public class RoomActivity extends AppCompatActivity {
                         Intent intent2 = new Intent(RoomActivity.this, MainActivity.class);
                         startActivity(intent2);
                         break;
-                    case R.id.nav_groups:
+                    case R.id.nav_group:
                         Intent intent3 = new Intent(RoomActivity.this, GroupActivity.class);
                         startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(RoomActivity.this, Settings.class);
+                        startActivity(intent4);
                     default:
                         return true;
                 }

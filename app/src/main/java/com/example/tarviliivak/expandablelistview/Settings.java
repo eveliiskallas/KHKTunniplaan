@@ -53,11 +53,11 @@ public class Settings extends AppCompatActivity {
                         Intent intent = new Intent(Settings.this, StudentActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_teachers:
+                    case R.id.nav_teacher:
                         Intent intent1 = new Intent(Settings.this, TeacherActivity.class);
                         startActivity(intent1);
                         break;
-                    case R.id.nav_groups:
+                    case R.id.nav_group:
                         Intent intent2 = new Intent(Settings.this, GroupActivity.class);
                         startActivity(intent2);
                         break;
@@ -65,7 +65,7 @@ public class Settings extends AppCompatActivity {
                         Intent intent3 = new Intent(Settings.this, MainActivity.class);
                         startActivity(intent3);
                         break;
-                    case R.id.nav_rooms:
+                    case R.id.nav_room:
                         Intent intent4 = new Intent(Settings.this, RoomActivity.class);
                         startActivity(intent4);
                     default:

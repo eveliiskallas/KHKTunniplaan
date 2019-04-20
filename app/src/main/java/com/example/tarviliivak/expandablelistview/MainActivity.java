@@ -24,8 +24,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DrawerLayout dl;
-    private ActionBarDrawerToggle t;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
     private NavigationView nv;
 
 
@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dl = (DrawerLayout) findViewById(R.id.activity_main);
-        t = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+        drawer =  findViewById(R.id.activity_main);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 
-        dl.addDrawerListener(t);
-        t.syncState();
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         nv = (NavigationView) findViewById(R.id.nv);
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -54,17 +54,21 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, StudentActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_teachers:
+                    case R.id.nav_teacher:
                         Intent intent1 = new Intent(MainActivity.this, TeacherActivity.class);
                         startActivity(intent1);
                         break;
-                    case R.id.nav_groups:
+                    case R.id.nav_group:
                         Intent intent2 = new Intent(MainActivity.this, GroupActivity.class);
                         startActivity(intent2);
                         break;
-                    case R.id.nav_rooms:
+                    case R.id.nav_room:
                         Intent intent3 = new Intent(MainActivity.this, RoomActivity.class);
                         startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(MainActivity.this, Settings.class);
+                        startActivity(intent4);
                     default:
                         return true;
                 }
@@ -133,23 +137,13 @@ public class MainActivity extends AppCompatActivity {
         listHash.put(listDataHeader.get(4), tund);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.settings, menu);
+//        return true;
+//    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings: {
-                Intent i = new Intent(MainActivity.this, Settings.class);
-                startActivity(i);
-            }
-        }
-        return true;
-    }
 }
 
 

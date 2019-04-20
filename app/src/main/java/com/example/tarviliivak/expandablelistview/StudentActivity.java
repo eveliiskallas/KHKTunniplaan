@@ -49,11 +49,11 @@ public class StudentActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.nav_groups:
+                    case R.id.nav_group:
                         Intent intent = new Intent(StudentActivity.this, GroupActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_teachers:
+                    case R.id.nav_teacher:
                         Intent intent1 = new Intent(StudentActivity.this, TeacherActivity.class);
                         startActivity(intent1);
                         break;
@@ -61,9 +61,13 @@ public class StudentActivity extends AppCompatActivity {
                         Intent intent2 = new Intent(StudentActivity.this, MainActivity.class);
                         startActivity(intent2);
                         break;
-                    case R.id.nav_rooms:
+                    case R.id.nav_room:
                         Intent intent3 = new Intent(StudentActivity.this, RoomActivity.class);
                         startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(StudentActivity.this, Settings.class);
+                        startActivity(intent4);
                     default:
                         return true;
                 }
