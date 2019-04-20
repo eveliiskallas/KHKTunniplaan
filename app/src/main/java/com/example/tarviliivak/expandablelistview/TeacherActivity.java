@@ -108,22 +108,5 @@ public class TeacherActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings: {
-                Intent i = new Intent(TeacherActivity.this, Settings.class);
-                startActivity(i);
-            }
-        }
-        return true;
-    }
 }
 

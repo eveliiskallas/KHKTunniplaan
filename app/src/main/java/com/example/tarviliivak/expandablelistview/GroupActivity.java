@@ -107,23 +107,5 @@ public class GroupActivity extends AppCompatActivity {
         listHash.put(listDataHeader.get(0), edmtDev);
 
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings: {
-                Intent i = new Intent(GroupActivity.this, Settings.class);
-                startActivity(i);
-            }
-        }
-        return true;
-    }
 }
 

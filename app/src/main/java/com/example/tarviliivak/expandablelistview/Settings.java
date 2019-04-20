@@ -107,11 +107,5 @@ public class Settings extends AppCompatActivity {
 //        listHash.put(listDataHeader.get(0), edmtDev);
 //    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings, menu);
-        return true;
-    }
 }
 
