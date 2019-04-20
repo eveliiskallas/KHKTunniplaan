@@ -21,7 +21,7 @@
             android:title="@string/room"></item>
     </group>
 
-    <item android:title="Sätted">
+    <item android:title="">
         <menu>
             <item
                 android:id="@+id/action_settings"
