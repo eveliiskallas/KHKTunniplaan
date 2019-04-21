@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
@@ -23,12 +24,12 @@ import java.util.List;
 
 public class Settings extends AppCompatActivity {
 
-    private DrawerLayout dl;
-    private ActionBarDrawerToggle t;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
     private NavigationView nv;
 
 
-    private ExpandableListView listView;
+//    private ExpandableListView listView;
 //    private ExpandableListAdapter listAdapter;
 //    private List<String> listDataHeader;
 //    private HashMap<String, List<String>> listHash;
@@ -38,11 +39,11 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dl = (DrawerLayout) findViewById(R.id.activity_main);
-        t = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+        drawer = (DrawerLayout) findViewById(R.id.activity_main);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 
-        dl.addDrawerListener(t);
-        t.syncState();
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         nv = (NavigationView) findViewById(R.id.nv);
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -76,36 +77,14 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+        Setting_btn fragment = new Setting_btn();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_btn, fragment);
+        fragmentTransaction.commit();
 
-        listView = (ExpandableListView) findViewById(R.id.lvExp);
-//        initData();
-//        listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
-//        listView.setAdapter(listAdapter);
+        setContentView(R.layout.fragment_setting_btn);
+
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (t.onOptionsItemSelected(item))
-            return true;
-        return super.onOptionsItemSelected(item);
-    }
-
-
-//    private void initData() {
-//        listDataHeader = new ArrayList<>();
-//        listHash = new HashMap<>();
-//
-//        listDataHeader.add("Seaded");
-//
-//
-//        List<String> edmtDev = new ArrayList<>();
-//        edmtDev.add("Tund 1");
-//        edmtDev.add("Tund 2");
-//        edmtDev.add("Tund 3");
-//        edmtDev.add("Tund 4");
-//
-//        listHash.put(listDataHeader.get(0), edmtDev);
-//    }
 
 }
 
