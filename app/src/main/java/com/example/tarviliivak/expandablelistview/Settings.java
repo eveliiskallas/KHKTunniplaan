@@ -37,7 +37,14 @@ public class Settings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.include);
+
+//        Setting_btn fragment = new Setting_btn();
+//        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.add(R.id.include, fragment);
+//        fragmentTransaction.commit();
+//
+//        setContentView(R.layout.include);
 
         drawer = (DrawerLayout) findViewById(R.id.activity_main);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
@@ -76,13 +83,6 @@ public class Settings extends AppCompatActivity {
                 return true;
             }
         });
-
-        Setting_btn fragment = new Setting_btn();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.fragment_btn, fragment);
-        fragmentTransaction.commit();
-
-        setContentView(R.layout.fragment_setting_btn);
 
     }
 
