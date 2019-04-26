@@ -9,5 +9,7 @@
     <string name="object">ÕPILASED</string>
     <string name="Close">Close</string>
     <string name="Open">Open</string>
+    <string name="choose">Vali Õppegrupp</string>
+    <string name="back">Tagasi</string>
 
 </resources>

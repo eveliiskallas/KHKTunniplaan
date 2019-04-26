@@ -1,20 +1,24 @@
 package com.example.tarviliivak.expandablelistview;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 
@@ -27,7 +31,7 @@ public class Settings extends AppCompatActivity {
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
     private NavigationView nv;
-
+    Button b;
 
 //    private ExpandableListView listView;
 //    private ExpandableListAdapter listAdapter;
@@ -39,14 +43,11 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.include);
 
-//        Setting_btn fragment = new Setting_btn();
-//        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//        fragmentTransaction.add(R.id.include, fragment);
-//        fragmentTransaction.commit();
-//
-//        setContentView(R.layout.include);
+        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.container, new Setting_btn());
+        fragmentTransaction.commit();
 
-        drawer = (DrawerLayout) findViewById(R.id.activity_main);
+        drawer = (DrawerLayout) findViewById(R.id.include);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 
         drawer.addDrawerListener(toggle);
@@ -84,7 +85,12 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+
     }
 
 }
+
+
+
+
 
