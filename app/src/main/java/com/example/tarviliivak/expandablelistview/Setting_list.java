@@ -19,14 +19,14 @@ public class Setting_list extends Fragment {
         View view = inflater.inflate(R.layout.fragment_setting_list, container, false);
         Button btnFragment=(Button)view.findViewById(R.id.back);
 
-//        btnFragment.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                FragmentTransaction fr =getFragmentManager().beginTransaction();
-//                fr.replace(R.id.fragment_btn, new Setting_list());
-//                fr.commit();
-//            }
-//        });
+        btnFragment.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fr =getFragmentManager().beginTransaction();
+                fr.replace(R.id.container, new Setting_btn());
+                fr.commit();
+            }
+        });
         return view;
 
     }
