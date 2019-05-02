@@ -14,4 +14,28 @@
     <string name="back">Tagasi</string>
     <string name="back2">Tagasi</string>
 
+    <string name="group_prompt">Vali õppegrupp</string>
+    <string name="teach_prompt">Vali õpetaja</string>
+
+    <string-array name="group_arrays">
+        <item>VS17</item>
+        <item>VS18</item>
+        <item>IS117</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+    <string-array name="teacher_arrays">
+        <item>Ly Otsa</item>
+        <item>Eve Mäeorg</item>
+        <item>Anne Mootse</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
 </resources>
