@@ -10,6 +10,8 @@
     <string name="Close">Close</string>
     <string name="Open">Open</string>
     <string name="choose">Vali Õppegrupp</string>
+    <string name="choose2">Vali Õpetaja</string>
     <string name="back">Tagasi</string>
+    <string name="back2">Tagasi</string>
 
 </resources>

@@ -28,6 +28,7 @@ public class Setting_btn extends Fragment {
 
         Button btnFragment=(Button)view.findViewById(R.id.group_btn);
 
+
         btnFragment.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -37,6 +38,18 @@ public class Setting_btn extends Fragment {
             }
 
         });
+
+        Button brnFragment2=(Button)view.findViewById(R.id.teacher_btn);
+
+        brnFragment2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fr2 = getFragmentManager().beginTransaction();
+                fr2.replace(R.id.container, new Setting_list2());
+                fr2.commit();
+            }
+        });
+
 
         return view;
     }
