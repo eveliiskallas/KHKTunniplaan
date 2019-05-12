@@ -12,7 +12,9 @@
     <string name="choose">Vali Õppegrupp</string>
     <string name="choose2">Vali Õpetaja</string>
     <string name="back">Tagasi</string>
+    <string name="submit">Saada</string>
     <string name="back2">Tagasi</string>
+    <string name="name">Test</string>
 
     <string name="group_prompt">Vali õppegrupp</string>
     <string name="teach_prompt">Vali õpetaja</string>

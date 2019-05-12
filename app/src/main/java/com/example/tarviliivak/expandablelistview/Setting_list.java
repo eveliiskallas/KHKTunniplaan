@@ -1,5 +1,6 @@
 package com.example.tarviliivak.expandablelistview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,7 @@ public class Setting_list extends Fragment {
         View view = inflater.inflate(R.layout.fragment_setting_list, container, false);
         Button btnFragment=(Button)view.findViewById(R.id.back);
 
+
         btnFragment.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -27,6 +29,7 @@ public class Setting_list extends Fragment {
                 fr.commit();
             }
         });
+
         return view;
 
     }

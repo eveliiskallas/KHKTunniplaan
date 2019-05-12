@@ -9,30 +9,38 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
     private NavigationView nv;
-
-
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHash;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,12 +93,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (t.onOptionsItemSelected(item))
-//            return true;
-//            return super.onOptionsItemSelected(item);
-//    }
 
 
     private void initData() {
@@ -136,13 +138,6 @@ public class MainActivity extends AppCompatActivity {
         listHash.put(listDataHeader.get(3), uwp);
         listHash.put(listDataHeader.get(4), tund);
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.settings, menu);
-//        return true;
-//    }
 
 }
 
