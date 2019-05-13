@@ -2,8 +2,13 @@ package com.example.tarviliivak.expandablelistview;
 
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,12 +16,58 @@ import android.widget.ListView;
 
 public class StudentActivity extends AppCompatActivity {
 
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle t;
+    private NavigationView nv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        dl = (DrawerLayout) findViewById(R.id.activity_main);
+        t = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+
+        dl.addDrawerListener(t);
+        t.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_group:
+                        Intent intent = new Intent(StudentActivity.this, GroupActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_teacher:
+                        Intent intent1 = new Intent(StudentActivity.this, TeacherActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_timetable:
+                        Intent intent2 = new Intent(StudentActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_room:
+                        Intent intent3 = new Intent(StudentActivity.this, RoomActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(StudentActivity.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+        });
+
+
     }
+
+
 }
 
 /*

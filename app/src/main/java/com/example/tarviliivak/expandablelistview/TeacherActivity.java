@@ -3,14 +3,23 @@ package com.example.tarviliivak.expandablelistview;
 
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class TeacherActivity extends AppCompatActivity {
+
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle t;
+    private NavigationView nv;
 
     String items[] = new String [] {"Aile Laats","Ain Veskiväli","Aina Rüütel","Airi Auser","Aivar Krull","Aivar Lippmaa","Alina Orlova","Allan Patska","Andreas Sester","Andrus Kolonistov","Anna Karutina","Anne Krull","Anne Mootse","Annereet Paatsi","Anti Kustassoo",
             "Anu Tintera","Arno Ratas","Astra Pintson-Käo","Berit Hipponen","Bianka Makoid","Diana Eller","Edda Sõõru","Edvard Lõhmus","Ele Nurk","Elen Nurm","Elika Raal-Kikas","Elis Liblik","Eliseta Talviste","Ellen Aunin","Elme Sälik","Elo Õun","Ene Jõeveer","Erna Urm","Eve Mäeorg",
@@ -28,6 +37,44 @@ public class TeacherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dl = (DrawerLayout) findViewById(R.id.activity_main);
+        t = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+
+        dl.addDrawerListener(t);
+        t.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_student:
+                        Intent intent = new Intent(TeacherActivity.this, StudentActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_group:
+                        Intent intent1 = new Intent(TeacherActivity.this, GroupActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_timetable:
+                        Intent intent2 = new Intent(TeacherActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_room:
+                        Intent intent3 = new Intent(TeacherActivity.this, RoomActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(TeacherActivity.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+        });
 
         ListView listView =(ListView) findViewById(R.id.ListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);

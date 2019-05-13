@@ -10,7 +10,12 @@ import android.widget.ListView;
 
 public class Food_tourism extends AppCompatActivity {
 
-    String items[] = new String [] {"AP18","AP19","AI18","AI19","GI18","GI19","HTS19","K117","K118","K119","K217","K218","K219","K318","KA18","KA19","KA218","KA219","KEo19","KEo219","KK17","KK18","KK19","KKo17","KKo18","KKo19","KO18","KO19","KOo19","KPAo18","KPAo19","KPKo17","KPKo18","KPKo19","LTo19","MJ117","MJ118","MJ119","MJ217","MJ218","MJ219","MJK19","PA18","PA19","PK17","PK18","PK19","RB18","RB19","TEP17","TEP18","TEP19","TK18","TK19","TSTt118","TSTt19","TSTt218","TTKo19"};
+    String items[] = new String [] {"AP18","AP19","AI18","AI19","GI18","GI19","HTS19","K117",
+            "K118","K119","K217","K218","K219","K318","KA18","KA19","KA218","KA219","KEo19",
+            "KEo219","KK17","KK18","KK19","KKo17","KKo18","KKo19","KO18","KO19","KOo19",
+            "KPAo18","KPAo19","KPKo17","KPKo18","KPKo19","LTo19","MJ117","MJ118","MJ119",
+            "MJ217","MJ218","MJ219","MJK19","PA18","PA19","PK17","PK18","PK19","RB18",
+            "RB19","TEP17","TEP18","TEP19","TK18","TK19","TSTt118","TSTt19","TSTt218","TTKo19"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

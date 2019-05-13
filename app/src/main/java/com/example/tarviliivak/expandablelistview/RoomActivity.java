@@ -2,14 +2,23 @@ package com.example.tarviliivak.expandablelistview;
 
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class RoomActivity extends AppCompatActivity {
+
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle t;
+    private NavigationView nv;
 
     String items[] = new String [] {"KPL-A032A","KPL-A032B","KPL-A050","KPL-A116","KPL-A118","KPL-A119","KPL-A121","KPL-A138","KPL-A139","KPL-A160A/B","KPL-A169","KPL-A171","KPL-A173A","KPL-A175","KPL-A180","KPL-A182",
             "KPL-A183","KPL-A184","KPL-A204","KPL-A205","KPL-A206","KPL-A207","KPL-A208","KPL-A209","KPL-A211","KPL-A213","KPL-A220","KPL-A227","KPL-A228","KPL-A229","KPL-A301","KPL-A303","KPL-A304","KPL-A305","KPL-A306","KPL-A307","KPL-A308",
@@ -25,6 +34,44 @@ public class RoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dl = (DrawerLayout) findViewById(R.id.activity_main);
+        t = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+
+        dl.addDrawerListener(t);
+        t.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_student:
+                        Intent intent = new Intent(RoomActivity.this, StudentActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_teacher:
+                        Intent intent1 = new Intent(RoomActivity.this, TeacherActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_timetable:
+                        Intent intent2 = new Intent(RoomActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_group:
+                        Intent intent3 = new Intent(RoomActivity.this, GroupActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(RoomActivity.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+        });
 
         ListView listView =(ListView) findViewById(R.id.ListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);
