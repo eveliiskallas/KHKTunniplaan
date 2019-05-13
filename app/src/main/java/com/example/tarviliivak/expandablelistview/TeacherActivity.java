@@ -46,35 +46,35 @@ public class TeacherActivity extends AppCompatActivity {
 
         nv = (NavigationView) findViewById(R.id.nv);
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_student:
-                        Intent intent = new Intent(TeacherActivity.this, StudentActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.nav_group:
-                        Intent intent1 = new Intent(TeacherActivity.this, GroupActivity.class);
-                        startActivity(intent1);
-                        break;
-                    case R.id.nav_timetable:
-                        Intent intent2 = new Intent(TeacherActivity.this, MainActivity.class);
-                        startActivity(intent2);
-                        break;
-                    case R.id.nav_room:
-                        Intent intent3 = new Intent(TeacherActivity.this, RoomActivity.class);
-                        startActivity(intent3);
-                        break;
-                    case R.id.action_settings:
-                        Intent intent4 = new Intent(TeacherActivity.this, Settings.class);
-                        startActivity(intent4);
-                    default:
-                        return true;
-                }
+             @Override
+             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                 switch (item.getItemId()) {
+                     case R.id.nav_student:
+                         Intent intent = new Intent(TeacherActivity.this, StudentActivity.class);
+                         startActivity(intent);
+                         break;
+                     case R.id.nav_group:
+                         Intent intent1 = new Intent(TeacherActivity.this, GroupActivity.class);
+                         startActivity(intent1);
+                         break;
+                     case R.id.nav_timetable:
+                         Intent intent2 = new Intent(TeacherActivity.this, MainActivity.class);
+                         startActivity(intent2);
+                         break;
+                     case R.id.nav_room:
+                         Intent intent3 = new Intent(TeacherActivity.this, RoomActivity.class);
+                         startActivity(intent3);
+                         break;
+                     case R.id.action_settings:
+                         Intent intent4 = new Intent(TeacherActivity.this, Settings.class);
+                         startActivity(intent4);
+                     default:
+                         return true;
+                 }
 
-                return true;
-            }
-        });
+                 return true;
+             }
+         });
 
         ListView listView =(ListView) findViewById(R.id.ListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);
