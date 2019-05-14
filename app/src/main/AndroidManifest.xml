@@ -568,12 +568,13 @@
         <activity android:name=".KPL_A050" />
         <activity android:name=".KPL_A032B" />
         <activity android:name=".KPL_A032A" />
-        <activity android:name=".Settings"></activity>
         <activity android:name=".RoomActivity" />
         <activity android:name=".GroupActivity" />
         <activity android:name=".TeacherActivity" />
         <activity android:name=".StudentActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Settings">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

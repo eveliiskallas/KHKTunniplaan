@@ -5,7 +5,7 @@
     <string name="group">Õppegrupid</string>
     <string name="teacher">Õpetajad</string>
     <string name="room">Ruumid</string>
-    <string name="action_settings">Sätted</string>
+
     <string name="object">ÕPILASED</string>
     <string name="Close">Close</string>
     <string name="Open">Open</string>
@@ -17,27 +17,31 @@
     <string name="name">Test</string>
 
     <string name="group_prompt">Vali õppegrupp</string>
-    <string name="teach_prompt">Vali õpetaja</string>
 
     <string-array name="group_arrays">
-        <item>VS17</item>
-        <item>VS18</item>
-        <item>IS117</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
+        <item>Autoosakond</item>
+        <item>Äri ja kaubanduse osakond</item>
+        <item>Ehituse ja puidu osakond</item>
+        <item>IKT-osakond</item>
+        <item>Iluteeninduse ja tekstiili osakond</item>
+        <item>Tehnika osakond</item>
+        <item>Toitlustuse ja turismi osakond</item>
     </string-array>
+
+    <string name="teach_prompt">Vali õpetaja</string>
+
     <string-array name="teacher_arrays">
-        <item>Ly Otsa</item>
-        <item>Eve Mäeorg</item>
-        <item>Anne Mootse</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
+        <item>Aile Laats</item><item>Ain Veskiväli</item><item>Aina Rüütel</item><item>Airi Auser</item><item>Aivar Krull</item><item>Aivar Lippmaa</item><item>Alina Orlova</item><item>Allan Patska</item><item>Andreas Sester</item><item>Andrus Kolonistov</item><item>Anna Karutina</item><item>Anne Krull</item><item>Anne Mootse</item><item>Annereet Paatsi</item><item>Anti Kustassoo</item>
+        <item>Anu Tintera</item><item>Arno Ratas</item><item>Astra Pintson-Käo</item><item>Berit Hipponen</item><item>Bianka Makoid</item><item>Diana Eller</item><item>Edda Sõõru</item><item>Edvard Lõhmus</item><item>Ele Nurk</item><item>Elen Nurm</item><item>Elika Raal-Kikas</item><item>Elis Liblik</item><item>Eliseta Talviste</item><item>Ellen Aunin</item><item>Elme Sälik</item><item>Elo Õun</item><item>Ene Jõeveer</item><item>Erna Urm</item><item>Eve Mäeorg</item>
+        <item>Eve Siimus</item><item>Evely Vutt</item><item>Gen Lee</item><item>Gerda Ode</item><item>Gerly Sepping</item><item>Harri Laustam</item><item>Hedi Männi</item><item>Heigo Lipp</item><item>Heiki Keem</item><item>Hele Moor</item><item>Helin Liiv</item><item>Helina Esnar</item><item>Hellika Ivanov-Simson</item><item>Helver Kooser</item><item>Helvi Teigar</item><item>Henno Täht</item><item>Hille Alberg</item><item>Hindrek Sokk</item><item>Ilvi Palu</item><item>Inga Ilves</item><item>Ingrid Sööt</item><item>Iolanda Pärtmaa</item>
+        <item>Iraida Krivoguzova</item><item>Irina Võsar</item><item>Ismail Mirzojev</item><item>Ivar Kaine</item><item>Jaan Peetso</item><item>Janari Zirk</item><item>Jelena Kutšmuk</item><item>Johannes Soobik</item><item>Julia  Kovalenko</item><item>Kaarel Rodima</item><item>Kadri Meesak</item><item>Kaido Tammepõld</item><item>Kaido Toobal</item><item>Kaido Voitra</item><item>Kaire Jõgi</item><item>Kaire Välb</item><item>Kairi Timusk</item><item>Kalle Viira</item><item>Kalmer Kollom</item>
+        <item>Kamilla Lüdikainen</item><item>Karin Lindmägi</item><item>Karin Roosipuu</item><item>Karin Traks</item><item>Katrin Jurs</item><item>Katrin Kont</item><item>Katrin Krünvald</item><item>Katrin Põhako</item><item>Kersti Poska</item><item>Ksenia George</item><item>Kätlin Kask</item><item>Külliki Vaske</item><item>Laili Kannel</item><item>Larissa Sidoruk</item><item>Lauri Maran</item><item>Lehte Teern</item><item>Lembit Arus</item><item>Liia Sinivee</item><item>Liis Jurjev</item>
+        <item>Liivi Albre</item><item>Liivi Raudsepp</item><item>Lili Kängsepp</item><item>Lilija Suburg</item><item>Ljudmila Klotško</item><item>Ly Otsa</item><item>Maarja Lebedev</item><item>Maarja Tsimmer</item><item>Madli Rööpmann</item><item>Maicel Pütt</item><item>Maigi Lepik</item><item>Maire Kask</item><item>Maire Linsi</item><item>Maire Merits</item><item>Maiu Praakli</item><item>Maksim Tjukin</item><item>Malle Kalmus</item><item>Maret Männik</item><item>Maret Võrno</item>
+        <item>Marge Kusplap</item><item>Margit Põldmaa</item><item>Margus Ainsalu</item><item>Mariana Rand</item><item>Marika Paulus</item><item>Maris Tigas</item><item>Marju Bergmann</item><item>Marko Mumm</item><item>Marlene Altmäe</item><item>Martin Hanson</item><item>Mati Malm</item><item>Meelis Vaher</item><item>Meida Veskus</item><item>Merike Kangro</item><item>Merle Truupõld</item><item>Mihhail Karutin</item><item>Mirjam-Merike Sõmer</item><item>Monika Lattik</item><item>Nikolai Jukin</item>
+        <item>Olga Lugina</item><item>Oskar Hint</item><item>Paula Mall Pedmanson</item><item>Pille Kessel</item><item>Piret Neihaus</item><item>Piret Tamm</item><item>Pärt Blank</item><item>Raissa Orlova</item><item>Rait Koort</item><item>Rando Koks</item><item>Reeli Engelbrecht</item><item>Reet Saarep</item><item>Reido Orov</item><item>Rene Lukk</item><item>Riina Mändla</item><item>Riivo Rivimets</item>
+        <item>Risto Asso</item><item>Signe Vedler</item><item>Sigrid Ester Tani</item><item>Siiri Kütt</item><item>Sille Eero</item><item>Sille Lillestik</item><item>Silvia Pihu</item><item>Siret Zirk</item><item>Sirje Jäär</item><item>Sirje Kikas</item><item>Sulev Kiivit</item><item>Taissa Sulajeva</item><item>Tanel Plovits</item><item>Tarmo Rand</item><item>Tarmo Teekivi</item><item>Tauri Moones</item><item>Tauris Vijar</item><item>Tiina Aidnik</item><item>Tiina Friedrichson</item>
+        <item>Tiina Hintser</item><item>Tiina Ilus</item><item>Tiina Kraav</item><item>Tiina Kärner</item><item>Tiiu Kruusmaa</item><item>Tiiu Vellevoog</item><item>Timo Puistaja</item><item>Toomas Sommer</item><item>Tõnu Mustjõgi</item><item>Urmas Treier</item><item>Vaike Vetka</item><item>Valdur Leppik</item><item>Valdo Abel</item><item>Veronica Reimaa</item><item>Viktoria Anušova</item><item>Villu Repän</item><item>Vilve Pohla</item><item>Vladislav Tsaregordtsev</item><item>Õnnela Muuga</item>
+        <item>Ülle Antson</item><item>Ülle Kruuda</item><item>Ülle Soeson</item>
     </string-array>
 
 </resources>
