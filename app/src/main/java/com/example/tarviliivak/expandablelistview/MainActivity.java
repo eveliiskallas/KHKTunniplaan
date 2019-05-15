@@ -34,6 +34,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun) {
+            //show sign up activity
+            startActivity(new Intent(MainActivity.this, Settings.class));
+            Toast.makeText(MainActivity.this, "Run only once", Toast.LENGTH_LONG)
+                    .show();
+        }
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).apply();
+
+
         drawer =  findViewById(R.id.activity_main);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 
@@ -45,10 +59,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.nav_student:
-                        Intent intent = new Intent(MainActivity.this, StudentActivity.class);
-                        startActivity(intent);
-                        break;
                     case R.id.nav_teacher:
                         Intent intent1 = new Intent(MainActivity.this, TeacherActivity.class);
                         startActivity(intent1);

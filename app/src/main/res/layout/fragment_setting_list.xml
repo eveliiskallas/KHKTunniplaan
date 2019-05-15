@@ -36,7 +36,7 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/group_list"
+        app:layout_constraintBottom_toTopOf="@+id/group_spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -43,6 +43,7 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.include);
 
+
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.container, new Setting_btn());
         fragmentTransaction.commit();
@@ -58,10 +59,6 @@ public class Settings extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.nav_student:
-                        Intent intent = new Intent(Settings.this, StudentActivity.class);
-                        startActivity(intent);
-                        break;
                     case R.id.nav_teacher:
                         Intent intent1 = new Intent(Settings.this, TeacherActivity.class);
                         startActivity(intent1);

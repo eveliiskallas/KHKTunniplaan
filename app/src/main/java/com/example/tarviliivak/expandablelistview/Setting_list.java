@@ -24,6 +24,7 @@ public class Setting_list extends Fragment {
 
     ArrayAdapter adapter;
     Spinner spinner;
+    Button submit;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -54,35 +55,78 @@ public class Setting_list extends Fragment {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position==0){
-                    Intent myIntent = new Intent(view.getContext(), Auto.class);
-                    startActivityForResult(myIntent, 0);
-                }
-                if(position==1){
-                    Intent myIntent = new Intent(view.getContext(), Business.class);
-                    startActivityForResult(myIntent, 1);
-                }
-                if(position==2){
-                    Intent myIntent = new Intent(view.getContext(), Construction.class);
-                    startActivityForResult(myIntent, 2);
-                }
-                if(position==3){
-                    Intent myIntent = new Intent(view.getContext(), ICT.class);
-                    startActivityForResult(myIntent, 3);
-                }
-                if(position==4){
-                    Intent myIntent = new Intent(view.getContext(), Beauty_textile.class);
-                    startActivityForResult(myIntent, 4);
-                }
-                if(position==5){
-                    Intent myIntent = new Intent(view.getContext(), Tech.class);
-                    startActivityForResult(myIntent, 5);
-                }
-                if(position==6){
-                    Intent myIntent = new Intent(view.getContext(), Food_tourism.class);
-                    startActivityForResult(myIntent, 6);
-                }
+            public void onItemSelected(AdapterView<?> parent, final View view, int position, long id) {
+
+//                if(position==0){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Auto.class);
+//                            startActivityForResult(myIntent, 0);
+//                        }
+//                    });
+//
+//                }
+//                if(position==1){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Business.class);
+//                            startActivityForResult(myIntent, 1);
+//                        }
+//                    });
+//
+//                }
+//                if(position==2){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Construction.class);
+//                            startActivityForResult(myIntent, 2);
+//                        }
+//                    });
+//
+//                }
+//                if(position==3){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), ICT.class);
+//                            startActivityForResult(myIntent, 3);
+//                        }
+//                    });
+//
+//                }
+//                if(position==4){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Beauty_textile.class);
+//                            startActivityForResult(myIntent, 4);
+//                        }
+//                    });
+//
+//                }
+//                if(position==5){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Tech.class);
+//                            startActivityForResult(myIntent, 5);
+//                        }
+//                    });
+//
+//                }
+//                if(position==6){
+//                    submit.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            Intent myIntent = new Intent(view.getContext(), Food_tourism.class);
+//                            startActivityForResult(myIntent, 6);
+//                        }
+//                    });
+//
+//                }
 
             }
 
@@ -95,4 +139,5 @@ public class Setting_list extends Fragment {
         return view;
 
     }
+
 }
