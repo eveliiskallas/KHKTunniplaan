@@ -188,10 +188,9 @@
         <activity android:name=".ARHt19" />
         <activity android:name=".ARHt18" />
         <activity android:name=".Akt19" />
-        <activity android:name=".Akt17" />
         <activity android:name=".AK19" />
         <activity android:name=".AK18" />
-        <activity android:name=".AK17" />
+        <activity android:name=".Akt18" />
         <activity android:name=".AUT18" />
         <activity android:name=".AUT17" />
         <activity android:name=".AUM19" />
@@ -209,7 +208,6 @@
         <activity android:name=".APL17" />
         <activity android:name=".APH218" />
         <activity android:name=".APH19" />
-        <activity android:name=".APH18" />
         <activity android:name=".APH118" />
         <activity android:name=".AM19" />
         <activity android:name=".AM18" />

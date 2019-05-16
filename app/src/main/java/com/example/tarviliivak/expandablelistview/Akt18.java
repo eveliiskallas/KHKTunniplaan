@@ -18,11 +18,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Akt17 extends AppCompatActivity {
+public class Akt18 extends AppCompatActivity {
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Grupid/Akt17.php";
+    private static final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Grupid/Akt18.php";
 
     //a list to store all the products
     List<Info> infoList;
@@ -83,7 +83,7 @@ public class Akt17 extends AppCompatActivity {
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            InfoAdapter adapter = new InfoAdapter(Akt17.this, infoList);
+                            InfoAdapter adapter = new InfoAdapter(Akt18.this, infoList);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
