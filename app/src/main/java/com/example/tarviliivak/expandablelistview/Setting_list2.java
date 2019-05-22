@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -21,6 +22,9 @@ import java.util.ArrayList;
 public class Setting_list2 extends Fragment {
 
     Spinner spinner2;
+    boolean isSpinnerTouched = false;
+    Button submit2;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -38,6 +42,8 @@ public class Setting_list2 extends Fragment {
             }
         });
 
+        submit2 = (Button) view.findViewById(R.id.submit2);
+
         spinner2 = (Spinner) view.findViewById(R.id.teach_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
@@ -47,52 +53,119 @@ public class Setting_list2 extends Fragment {
         // Apply the adapter to the spinner
         spinner2.setAdapter(adapter);
 
+        spinner2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                isSpinnerTouched = true;
+                return false;
+            }
+        });
+
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(!isSpinnerTouched) return;
+
                 if (position == 0) {
-                    Intent myIntent = new Intent(view.getContext(), Aile_Laats.class);
-                    startActivityForResult(myIntent, 1);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i = new Intent(getActivity(), MainActivity.class);
+                            i.putExtra("layout", R.layout.activity_aile__laats);
+                            getActivity().startActivity(i);
+                        }
+                    });
                 }
                 if (position == 1) {
-                    Intent myIntent = new Intent(view.getContext(), Ain_Veskivali.class);
-                    startActivityForResult(myIntent, 1);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Ain_Veskivali.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 2) {
-                    Intent myIntent = new Intent(view.getContext(), Aina_Ruutel.class);
-                    startActivityForResult(myIntent, 2);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Aina_Ruutel.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 3) {
-                    Intent myIntent = new Intent(view.getContext(), Airi_Auser.class);
-                    startActivityForResult(myIntent, 3);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Airi_Auser.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 4) {
-                    Intent myIntent = new Intent(view.getContext(), Aivar_Krull.class);
-                    startActivityForResult(myIntent, 4);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Aivar_Krull.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });;
                 }
                 if (position == 5) {
-                    Intent myIntent = new Intent(view.getContext(), Aivar_Lippmaa.class);
-                    startActivityForResult(myIntent, 5);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Aivar_Lippmaa.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 6) {
-                    Intent myIntent = new Intent(view.getContext(), Alina_Orlova.class);
-                    startActivityForResult(myIntent, 6);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Alina_Orlova.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 7) {
-                    Intent myIntent = new Intent(view.getContext(), Allan_Patska.class);
-                    startActivityForResult(myIntent, 7);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Allan_Patska.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 8) {
-                    Intent myIntent = new Intent(view.getContext(), Andreas_Sester.class);
-                    startActivityForResult(myIntent, 8);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Andreas_Sester.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 9) {
-                    Intent myIntent = new Intent(view.getContext(), Andrus_Kolonistov.class);
-                    startActivityForResult(myIntent, 9);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Andrus_Kolonistov.class);
+                            getActivity().startActivity(intent);
+
+                        }
+                    });
                 }
                 if (position == 10) {
-                    Intent myIntent = new Intent(view.getContext(), Anna_Karutina.class);
-                    startActivityForResult(myIntent, 10);
+                    submit2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), Anna_Karutina.class);
+                            getActivity().startActivity(intent);
+                        }
+                    });
                 }
                 if (position == 11) {
                     Intent myIntent = new Intent(view.getContext(), Anne_Krull.class);

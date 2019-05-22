@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -25,6 +26,8 @@ public class Setting_list extends Fragment {
     ArrayAdapter adapter;
     Spinner spinner;
     Button submit;
+    boolean isSpinnerTouched = false;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -54,18 +57,26 @@ public class Setting_list extends Fragment {
         spinner.setAdapter(adapter);
 
 
+        spinner.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                isSpinnerTouched = true;
+                return false;
+            }
+        });
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, final View view, int position, long id) {
 
-                String item = parent.getItemAtPosition(position).toString();
+            public void onItemSelected(AdapterView<?> parent, final View view, int position, long id) {
+                spinner.setSelection(position, false);
+
+                if(!isSpinnerTouched) return;
 
                 if (position == 0) {
                     Intent myIntent = new Intent(view.getContext(), AI18.class);
                     startActivityForResult(myIntent, 0);
                 }
-
-
                 if (position == 1) {
                     Intent myIntent = new Intent(view.getContext(), AI19.class);
                     startActivityForResult(myIntent, 1);
