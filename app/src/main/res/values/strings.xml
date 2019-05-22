@@ -19,13 +19,249 @@
     <string name="group_prompt">Vali õppegrupp</string>
 
     <string-array name="group_arrays">
-        <item>Autoosakond</item>
-        <item>Äri ja kaubanduse osakond</item>
-        <item>Ehituse ja puidu osakond</item>
-        <item>IKT-osakond</item>
-        <item>Iluteeninduse ja tekstiili osakond</item>
-        <item>Tehnika osakond</item>
-        <item>Toitlustuse ja turismi osakond</item>
+        <item>AI18</item>
+        <item>AI19</item>
+
+        <item>AK18</item>
+        <item>AK19</item>
+        <item>AKt18</item>
+        <item>AKt19</item>
+
+        <item>AM17</item>
+        <item>AM18</item>
+        <item>AM19</item>
+
+        <item>AP18</item>
+        <item>AP19</item>
+
+        <item>APH19</item>
+        <item>APH118</item>
+        <item>APH218</item>
+
+        <item>APL17</item>
+        <item>APL18</item>
+        <item>APL19</item>
+
+        <item>ARHt18</item>
+        <item>ARHt19</item>
+
+        <item>AT117</item>
+        <item>AT118</item>
+        <item>AT119</item>
+        <item>AT217</item>
+        <item>AT218</item>
+        <item>AT219</item>
+        <item>AT318</item>
+
+        <item>AUD19</item>
+
+        <item>AUM18</item>
+        <item>AUM19</item>
+
+        <item>AUT17</item>
+        <item>AUT18</item>
+
+        <item>BT17</item>
+        <item>BT18</item>
+        <item>BT19</item>
+
+        <item>CNC19</item>
+        <item>CNC219</item>
+
+        <item>EH17</item>
+        <item>EH18</item>
+        <item>EH19</item>
+        <item>EHt19</item>
+
+        <item>EKo19</item>
+        <item>EKt18</item>
+
+        <item>EL17</item>
+        <item>EL18</item>
+        <item>EL19</item>
+
+        <item>EV117</item>
+        <item>EV118</item>
+        <item>EV119</item>
+        <item>EV217</item>
+        <item>EV218</item>
+        <item>EV219</item>
+
+        <item>EVM18</item>
+        <item>EVM19</item>
+
+        <item>GI18</item>
+        <item>GI19</item>
+
+        <item>HTS19</item>
+
+        <item>IS19</item>
+        <item>IS118</item>
+        <item>ISP19</item>
+        <item>ISP117</item>
+        <item>ISP118</item>
+        <item>ISP217</item>
+        <item>ISP218</item>
+
+        <item>ITA19</item>
+
+        <item>K117</item>
+        <item>K118</item>
+        <item>K119</item>
+        <item>K217</item>
+        <item>K218</item>
+        <item>K219</item>
+        <item>K318</item>
+
+        <item>KA18</item>
+        <item>KA19</item>
+        <item>KA218</item>
+        <item>KA219</item>
+
+        <item>KD18</item>
+        <item>KD19</item>
+
+        <item>KEo19</item>
+        <item>KEo219</item>
+
+        <item>KJL19</item>
+        <item>KJL218</item>
+
+        <item>KK17</item>
+        <item>KK18</item>
+        <item>KK19</item>
+        <item>KKo17</item>
+        <item>KKo18</item>
+        <item>KKo19</item>
+        <item>KO18</item>
+        <item>KO19</item>
+        <item>Kokk19</item>
+        <item>KOo19</item>
+
+        <item>KPAo18</item>
+        <item>KPAo19</item>
+
+        <item>KPKo17</item>
+        <item>KPKo18</item>
+        <item>KPKo19</item>
+
+        <item>KR218</item>
+        <item>KR219</item>
+        <item>KRR17</item>
+        <item>KRR18</item>
+        <item>KRR19</item>
+
+        <item>KSM18</item>
+        <item>KSM19</item>
+
+        <item>KV17</item>
+        <item>KV18</item>
+        <item>KV19</item>
+        <item>KVO19</item>
+
+        <item>LE17</item>
+        <item>LE18</item>
+        <item>LE19</item>
+
+        <item>LM17</item>
+        <item>LM18</item>
+        <item>LM19</item>
+
+        <item>LOGo18</item>
+        <item>LS18</item>
+        <item>LSK19</item>
+        <item>LTo19</item>
+
+        <item>ME17</item>
+        <item>ME19</item>
+        <item>MEP18</item>
+        <item>MEP19</item>
+        <item>MEt19</item>
+
+        <item>MJ117</item>
+        <item>MJ118</item>
+        <item>MJ119</item>
+        <item>MJ217</item>
+        <item>MJ219</item>
+        <item>MJK19</item>
+
+        <item>MK17</item>
+        <item>MKo18</item>
+        <item>MKt19</item>
+        <item>MKt217</item>
+
+        <item>MRT18</item>
+        <item>MRT19</item>
+
+        <item>MT18</item>
+        <item>MT19</item>
+        <item>MT117</item>
+        <item>MTK17</item>
+        <item>MTK18</item>
+        <item>MTK19</item>
+
+        <item>MY17</item>
+        <item>MY18</item>
+        <item>MY19</item>
+        <item>MYEo18</item>
+        <item>MYEo19</item>
+
+        <item>NRT19</item>
+        <item>OM19</item>
+
+        <item>PA18</item>
+        <item>PA19</item>
+
+        <item>PK17</item>
+        <item>PK18</item>
+        <item>PK19</item>
+
+        <item>PLA19</item>
+        <item>PLA219</item>
+
+        <item>PT19</item>
+        <item>PTS19</item>
+        <item>PTS219</item>
+
+        <item>RB18</item>
+        <item>RB19</item>
+
+        <item>RMo18</item>
+        <item>RMo19</item>
+        <item>RMt19</item>
+
+        <item>SPA18</item>
+        <item>SPA19</item>
+
+        <item>SRo18</item>
+        <item>SRo19</item>
+
+        <item>SYS18</item>
+        <item>SYSt19</item>
+
+        <item>TEP17</item>
+        <item>TEP18</item>
+        <item>TEP19</item>
+
+        <item>TI18</item>
+        <item>TI19</item>
+
+        <item>TK18</item>
+        <item>TK19</item>
+
+        <item>TP17</item>
+        <item>TP19</item>
+        <item>TPK19</item>
+
+        <item>TSTt19</item>
+        <item>TSTt118</item>
+        <item>TSTt218</item>
+
+        <item>TTKo19</item>
+        <item>VKO18</item>
+        <item>VS18</item>
+        <item>VS19</item>
+        <item>VSo19</item>
     </string-array>
 
     <string name="teach_prompt">Vali õpetaja</string>

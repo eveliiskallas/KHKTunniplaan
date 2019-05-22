@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class Setting_list2 extends Fragment {
 
-    Spinner spinner;
+    Spinner spinner2;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -38,16 +38,16 @@ public class Setting_list2 extends Fragment {
             }
         });
 
-        spinner = (Spinner) view.findViewById(R.id.teach_spinner);
+        spinner2 = (Spinner) view.findViewById(R.id.teach_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
                 R.array.teacher_arrays, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
