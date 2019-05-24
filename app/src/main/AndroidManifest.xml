@@ -237,7 +237,7 @@
         <activity android:name=".Tiina_Hintser" />
         <activity android:name=".Tiina_Friedrichson" />
         <activity android:name=".Tiina_Aidnik" />
-        <activity android:name=".Tauris_Vijar" />
+        <activity android:name=".Tauris_Viljar" />
         <activity android:name=".Tauri_Moones" />
         <activity android:name=".Tarmo_Teekivi" />
         <activity android:name=".Tarmo_Rand" />

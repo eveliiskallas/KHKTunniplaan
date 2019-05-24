@@ -29,7 +29,7 @@ public class TeacherActivity extends AppCompatActivity {
             "Liivi Albre","Liivi Raudsepp","Lili Kängsepp","Lilija Suburg","Ljudmila Klotško","Ly Otsa","Maarja Lebedev","Maarja Tsimmer","Madli Rööpmann","Maicel Pütt","Maigi Lepik","Maire Kask","Maire Linsi","Maire Merits","Maiu Praakli","Maksim Tjukin","Malle Kalmus","Maret Männik","Maret Võrno",
             "Marge Kusplap","Margit Põldmaa","Margus Ainsalu","Mariana Rand","Marika Paulus","Maris Tigas","Marju Bergmann","Marko Mumm","Marlene Altmäe","Martin Hanson","Mati Malm","Meelis Vaher","Meida Veskus","Merike Kangro","Merle Truupõld","Mihhail Karutin","Mirjam-Merike Sõmer","Monika Lattik","Nikolai Jukin",
             "Olga Lugina","Oskar Hint","Paula Mall Pedmanson","Pille Kessel","Piret Neihaus","Piret Tamm","Pärt Blank","Raissa Orlova","Rait Koort","Rando Koks","Reeli Engelbrecht","Reet Saarep","Reido Orov","Rene Lukk","Riina Mändla","Riivo Rivimets",
-            "Risto Asso","Signe Vedler","Sigrid Ester Tani","Siiri Kütt","Sille Eero","Sille Lillestik","Silvia Pihu","Siret Zirk","Sirje Jäär","Sirje Kikas","Sulev Kiivit","Taissa Sulajeva","Tanel Plovits","Tarmo Rand","Tarmo Teekivi","Tauri Moones","Tauris Vijar","Tiina Aidnik","Tiina Friedrichson",
+            "Risto Asso","Signe Vedler","Sigrid Ester Tani","Siiri Kütt","Sille Eero","Sille Lillestik","Silvia Pihu","Siret Zirk","Sirje Jäär","Sirje Kikas","Sulev Kiivit","Taissa Sulajeva","Tanel Plovits","Tarmo Rand","Tarmo Teekivi","Tauri Moones","Tauris Viljar","Tiina Aidnik","Tiina Friedrichson",
             "Tiina Hintser","Tiina Ilus","Tiina Kraav","Tiina Kärner","Tiiu Kruusmaa","Tiiu Vellevoog","Timo Puistaja","Toomas Sommer","Tõnu Mustjõgi","Urmas Treier","Vaike Vetka","Valdur Leppik","Valdo Abel","Veronica Reimaa","Viktoria Anušova","Villu Repän","Vilve Pohla","Vladislav Tsaregordtsev","Õnnela Muuga",
             "Ülle Antson","Ülle Kruuda","Ülle Soeson"};
 
@@ -740,7 +740,7 @@ public class TeacherActivity extends AppCompatActivity {
                     startActivityForResult(myIntent, 163);
                 }
                 if(position==164){
-                    Intent myIntent = new Intent(view.getContext(), Tauris_Vijar.class);
+                    Intent myIntent = new Intent(view.getContext(), Tauris_Viljar.class);
                     startActivityForResult(myIntent, 164);
                 }
                 if(position==165){

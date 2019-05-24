@@ -22,7 +22,7 @@ public class Hellika_Ivanov_Simson extends AppCompatActivity {
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Opetajad/Hellika_Ivanov_Simson.php";
+    private static final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Opetajad/Hellika_Ivanov.php";
 
     //a list to store all the info
     List<Info> infoList;
