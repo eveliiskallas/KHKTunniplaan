@@ -42,30 +42,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.content);
 
 
-
-
-        Intent intent = getIntent();
-        String kuupaev = intent.getStringExtra("kuupaev");
-        String aeg = intent.getStringExtra("aeg");
-        String aine = intent.getStringExtra("aine");
-//        String grupp = intent.getStringExtra("grupp");
-//        String opetaja = intent.getStringExtra("opetaja");
-
-        TextView date = findViewById(R.id.textDate);
-        TextView time = findViewById(R.id.textTime);
-        TextView subject = findViewById(R.id.textSubject);
-//        TextView group = findViewById(R.id.textGroup);
-//        TextView teacher = findViewById(R.id.textTeacher);
-
-        date.setText(kuupaev);
-        time.setText(aeg);
-        subject.setText(aine);
-//        group.setText(grupp);
-//        teacher.setText(opetaja);
-
-
-
-
         drawer =  findViewById(R.id.content);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 

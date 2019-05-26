@@ -53,10 +53,6 @@ public class TeacherActivity extends AppCompatActivity {
                          Intent intent1 = new Intent(TeacherActivity.this, GroupActivity.class);
                          startActivity(intent1);
                          break;
-                     case R.id.nav_timetable:
-                         Intent intent2 = new Intent(TeacherActivity.this, MainActivity.class);
-                         startActivity(intent2);
-                         break;
                      case R.id.nav_room:
                          Intent intent3 = new Intent(TeacherActivity.this, RoomActivity.class);
                          startActivity(intent3);

@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="16dp"
@@ -28,84 +28,131 @@
             android:id="@+id/lvExp"
             android:layout_width="match_parent"
             android:layout_height="540dp"/>-->
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="TERE, KASUTAJA!"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.054" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/textVie2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Navigeerida saate, kui tõmbate ekraanil vasakult paremale. "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.376" />
 
-        <RelativeLayout
-            android:id="@+id/card"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:padding="8dp">
+        <TextView
+            android:id="@+id/textViev3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Kuna tegemist on algse versiooniga,  ei saa te hetkel kindlat tunniplaani põhivaatesse salvestada. Rakendust on võimalik edasi arendada!  "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.565" />
 
-            <TextView
-                android:id="@+id/textDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="Tere Tulemast"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="#000000"
-                android:textSize="17sp"/>
 
+    </android.support.constraint.ConstraintLayout>
 
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp">-->
 
-            <TextView
-                android:id="@+id/textTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textDate"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:textColor="#000000"
-                android:text=""
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/card"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:padding="8dp">-->
 
-            <TextView
-                android:id="@+id/textSubject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textTime"
-                android:layout_marginTop="6dp"
-
-                android:background="#FFFFFF"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
-                android:text=""
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textColor="#000000"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textSubject"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:text=""
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textTeacher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textGroup"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:text=""
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="16sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/textDate"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:text="Tere Tulemast"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="17sp"/>-->
 
 
 
-        </RelativeLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/textTime"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/textDate"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:textColor="#000000"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />-->
 
-    </android.support.v7.widget.CardView>
+            <!--<TextView-->
+                <!--android:id="@+id/textSubject"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/textTime"-->
+                <!--android:layout_marginTop="6dp"-->
+
+                <!--android:background="#FFFFFF"-->
+                <!--android:paddingLeft="6dp"-->
+                <!--android:paddingRight="6dp"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textGroup"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/textSubject"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textTeacher"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/textGroup"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+                <!--android:textSize="16sp" />-->
+
+
+
+        <!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nv"

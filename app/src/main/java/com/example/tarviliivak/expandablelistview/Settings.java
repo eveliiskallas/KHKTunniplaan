@@ -80,10 +80,6 @@ public class Settings extends AppCompatActivity {
                         Intent intent2 = new Intent(Settings.this, GroupActivity.class);
                         startActivity(intent2);
                         break;
-                    case R.id.nav_timetable:
-                        Intent intent3 = new Intent(Settings.this, MainActivity.class);
-                        startActivity(intent3);
-                        break;
                     case R.id.nav_room:
                         Intent intent4 = new Intent(Settings.this, RoomActivity.class);
                         startActivity(intent4);
