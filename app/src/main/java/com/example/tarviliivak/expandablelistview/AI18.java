@@ -1,5 +1,6 @@
 package com.example.tarviliivak.expandablelistview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.icu.text.IDNA;
@@ -32,6 +33,9 @@ import java.util.List;
 
 public class AI18 extends AppCompatActivity {
 
+
+
+
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
     private static final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Grupid/AI18.php";
@@ -47,12 +51,16 @@ public class AI18 extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView nv;
 
+    InfoAdapter infoAdapter;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         //getting the recyclerview from xml
         recyclerView = findViewById(R.id.recylcerView);
@@ -65,6 +73,7 @@ public class AI18 extends AppCompatActivity {
         //this method will fetch and parse json
         //to display it in recyclerview
         loadInfo();
+
 
         drawer =  findViewById(R.id.activity_main);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
@@ -103,7 +112,8 @@ public class AI18 extends AppCompatActivity {
     }
 
 
-    private void loadInfo() {
+
+    public void loadInfo() {
 
         /*
          * Creating a String Request
@@ -139,6 +149,7 @@ public class AI18 extends AppCompatActivity {
                             //creating adapter object and setting it to recyclerview
                             InfoAdapter adapter = new InfoAdapter(AI18.this, infoList);
                             recyclerView.setAdapter(adapter);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

@@ -1,9 +1,15 @@
 package com.example.tarviliivak.expandablelistview;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -30,6 +36,10 @@ public class PTS219 extends AppCompatActivity {
     //the recyclerview
     RecyclerView recyclerView;
 
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
+    private NavigationView nv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +54,39 @@ public class PTS219 extends AppCompatActivity {
         //initializing the productlist
         infoList = new ArrayList<>();
 
-        //this method will fetch and parse json
-        //to display it in recyclerview
-        loadInfo();
+        drawer =  findViewById(R.id.activity_main);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
+
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_teacher:
+                        Intent intent1 = new Intent(PTS219.this, TeacherActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_group:
+                        Intent intent2 = new Intent(PTS219.this, GroupActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_room:
+                        Intent intent3 = new Intent(PTS219.this, RoomActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(PTS219.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+        });         loadInfo();
     }
 
     private void loadInfo() {

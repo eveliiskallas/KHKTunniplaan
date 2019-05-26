@@ -1,7 +1,9 @@
 package com.example.tarviliivak.expandablelistview;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
@@ -20,16 +22,21 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +44,12 @@ import java.util.List;
 public class Setting_list extends Fragment {
 
     List<Info> infoList;
+
+    RecyclerView recyclerView;
+
+    InfoAdapter infoAdapter;
+
+
 
 
 
@@ -57,18 +70,17 @@ public class Setting_list extends Fragment {
             }
         });
 
+
+
+
         ListView group = (ListView)view.findViewById(R.id.group_list);
             group.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
                     if (position == 0) {
-                        final String URL_Info = "http://khktunniplaan.ikt.khk.ee/TUNNIPLAAN/Grupid/AI18.php";
-                        Intent intent = new Intent(view.getContext(), MainActivity.class);
-                        intent.putExtra("kuupaev", URL_Info);
-                        startActivityForResult(intent, 0);
-
+                        Intent myIntent = new Intent(view.getContext(), AI18.class);
+                        startActivityForResult(myIntent, 0);
                     }
-
 
 
                     if (position == 1) {

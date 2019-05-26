@@ -5,6 +5,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -32,36 +34,47 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView nv;
 
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content);
 
-//        Intent intent = getIntent();
-//        String key = intent.getStringExtra("kuupaev");
-//        Intent intent2 = getIntent();
-//        String jsonArray = intent2.getStringExtra("json");
-//
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun) {
+            //show sign up activity
+            startActivity(new Intent(MainActivity.this, Settings.class));
+            Toast.makeText(MainActivity.this, "Run only once", Toast.LENGTH_LONG)
+                    .show();
+        }
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).apply();
+
+
+
+
         Intent intent = getIntent();
         String kuupaev = intent.getStringExtra("kuupaev");
         String aeg = intent.getStringExtra("aeg");
         String aine = intent.getStringExtra("aine");
-        String grupp = intent.getStringExtra("grupp");
-        String opetaja = intent.getStringExtra("opetaja");
-//
-//
+//        String grupp = intent.getStringExtra("grupp");
+//        String opetaja = intent.getStringExtra("opetaja");
+
         TextView date = findViewById(R.id.textDate);
         TextView time = findViewById(R.id.textTime);
         TextView subject = findViewById(R.id.textSubject);
-        TextView group = findViewById(R.id.textGroup);
-        TextView teacher = findViewById(R.id.textTeacher);
-//
+//        TextView group = findViewById(R.id.textGroup);
+//        TextView teacher = findViewById(R.id.textTeacher);
+
         date.setText(kuupaev);
         time.setText(aeg);
         subject.setText(aine);
-        group.setText(grupp);
-        teacher.setText(opetaja);
+//        group.setText(grupp);
+//        teacher.setText(opetaja);
 
 
 

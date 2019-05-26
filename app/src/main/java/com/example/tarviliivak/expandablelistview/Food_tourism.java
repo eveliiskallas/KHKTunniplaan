@@ -1,14 +1,23 @@
 package com.example.tarviliivak.expandablelistview;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class Food_tourism extends AppCompatActivity {
+
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
+    private NavigationView nv;
 
     String items[] = new String [] {"AP18","AP19","AI18","AI19","GI18","GI19","HTS19","K117",
             "K118","K119","K217","K218","K219","K318","KA18","KA19","KA218","KA219","KEo19",
@@ -21,6 +30,40 @@ public class Food_tourism extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        drawer =  findViewById(R.id.activity_main);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
+
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_teacher:
+                        Intent intent1 = new Intent(Food_tourism.this, TeacherActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_group:
+                        Intent intent2 = new Intent(Food_tourism.this, GroupActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_room:
+                        Intent intent3 = new Intent(Food_tourism.this, RoomActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(Food_tourism.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+        });
 
         ListView listView =(ListView) findViewById(R.id.ListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);

@@ -1,8 +1,13 @@
 package com.example.tarviliivak.expandablelistview;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,12 +15,54 @@ import android.widget.ListView;
 
 public class Construction extends AppCompatActivity {
 
+
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle toggle;
+    private NavigationView nv;
+
+
     String items[] = new String [] {"CNC19","CNC219","EV117","EV118","EV119","EV217","EV218","EV219","EVM18","EVM19","KJL19","KJL218","LE17","LE18","LE19","MT117","MT18","MT19","MTK17","MTK18","MTK19","PLA19","PLA219","PPO19","PTS19","PTS219"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        drawer =  findViewById(R.id.activity_main);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
+
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_teacher:
+                        Intent intent1 = new Intent(Construction.this, TeacherActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.nav_group:
+                        Intent intent2 = new Intent(Construction.this, GroupActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_room:
+                        Intent intent3 = new Intent(Construction.this, RoomActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.action_settings:
+                        Intent intent4 = new Intent(Construction.this, Settings.class);
+                        startActivity(intent4);
+                    default:
+                        return true;
+                }
+
+                return true;
+            }
+    });
+
 
         ListView listView =(ListView) findViewById(R.id.ListView);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);
