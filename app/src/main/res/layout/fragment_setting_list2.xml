@@ -6,24 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/teach_spinner"
-        android:spinnerMode="dropdown"
-        android:layout_width="206dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:entries="@array/teacher_arrays"
-        android:prompt="@string/teach_prompt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
-
     <TextView
         android:id="@+id/choose"
         android:layout_width="211dp"
@@ -31,15 +13,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/choose2"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/teach_spinner"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
 
     <Button
         android:id="@+id/back2"
@@ -51,30 +35,45 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttonshape"
         android:linksClickable="true"
-        android:text="@string/back2"
+        android:text="@string/back"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985" />
+        app:layout_constraintVertical_bias="0.046" />
 
-    <Button
-        android:id="@+id/submit2"
-        android:layout_width="66dp"
-        android:layout_height="31dp"
+    <!--<Button-->
+        <!--android:id="@+id/submit2"-->
+        <!--android:layout_width="66dp"-->
+        <!--android:layout_height="31dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="36dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:background="@drawable/buttonshape"-->
+        <!--android:linksClickable="true"-->
+        <!--android:text="@string/submit"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="1.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.037" />-->
+
+    <ListView
+        android:id="@+id/teach_list"
+        android:layout_width="349dp"
+        android:layout_height="449dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/buttonshape"
-        android:linksClickable="true"
-        android:text="@string/submit"
-        android:textColor="@android:color/white"
+        android:entries="@array/teacher_arrays"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose" />
 
 
 </android.support.constraint.ConstraintLayout>

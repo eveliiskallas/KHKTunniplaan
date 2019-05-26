@@ -15,8 +15,12 @@ import android.widget.ExpandableListView;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.widget.TextView;
 import android.widget.Toast;
 
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,23 +36,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content);
 
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getBoolean("isFirstRun", true);
+//        Intent intent = getIntent();
+//        String key = intent.getStringExtra("kuupaev");
+//        Intent intent2 = getIntent();
+//        String jsonArray = intent2.getStringExtra("json");
+//
+        Intent intent = getIntent();
+        String kuupaev = intent.getStringExtra("kuupaev");
+        String aeg = intent.getStringExtra("aeg");
+        String aine = intent.getStringExtra("aine");
+        String grupp = intent.getStringExtra("grupp");
+        String opetaja = intent.getStringExtra("opetaja");
+//
+//
+        TextView date = findViewById(R.id.textDate);
+        TextView time = findViewById(R.id.textTime);
+        TextView subject = findViewById(R.id.textSubject);
+        TextView group = findViewById(R.id.textGroup);
+        TextView teacher = findViewById(R.id.textTeacher);
+//
+        date.setText(kuupaev);
+        time.setText(aeg);
+        subject.setText(aine);
+        group.setText(grupp);
+        teacher.setText(opetaja);
 
-        if (isFirstRun) {
-            //show sign up activity
-            startActivity(new Intent(MainActivity.this, Settings.class));
-            Toast.makeText(MainActivity.this, "Run only once", Toast.LENGTH_LONG)
-                    .show();
-        }
-
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).apply();
 
 
-        drawer =  findViewById(R.id.activity_main);
+
+        drawer =  findViewById(R.id.content);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.Open, R.string.Close);
 
         drawer.addDrawerListener(toggle);
@@ -84,23 +102,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (t.onOptionsItemSelected(item))
-//            return true;
-//            return super.onOptionsItemSelected(item);
-//    }
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.settings, menu);
-//        return true;
-//    }
-
 }
 
 
