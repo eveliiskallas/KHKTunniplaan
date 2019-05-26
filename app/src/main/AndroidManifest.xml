@@ -569,10 +569,11 @@
         <activity android:name=".RoomActivity" />
         <activity android:name=".GroupActivity" />
         <activity android:name=".TeacherActivity" />
-        <activity android:name=".Settings" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Settings" >
 
-            <intent-filter>
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -41,19 +41,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content);
 
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getBoolean("isFirstRun", true);
-
-        if (isFirstRun) {
-            //show sign up activity
-            startActivity(new Intent(MainActivity.this, Settings.class));
-            Toast.makeText(MainActivity.this, "Run only once", Toast.LENGTH_LONG)
-                    .show();
-        }
-
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).apply();
-
 
 
 
