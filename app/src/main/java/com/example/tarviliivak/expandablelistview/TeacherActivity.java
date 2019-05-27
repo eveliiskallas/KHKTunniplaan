@@ -77,14 +77,11 @@ public class TeacherActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                /*if(position==0){
-                    Intent myIntent = new Intent(view.getContext(), Aile_Laats.class);
-                    startActivityForResult(myIntent, 0);
-                }*/
                 if(position==0){
                     Intent myIntent = new Intent(view.getContext(), Aile_Laats.class);
-                    startActivityForResult(myIntent, 1);
+                    startActivityForResult(myIntent, 0);
                 }
+
                 if(position==1){
                     Intent myIntent = new Intent(view.getContext(), Ain_Veskivali.class);
                     startActivityForResult(myIntent, 1);

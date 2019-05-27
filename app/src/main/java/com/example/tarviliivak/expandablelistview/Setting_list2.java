@@ -46,11 +46,18 @@ ListView teacher;
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
-                if (position == 0) {
+                /*if (position == 0) {
 
                             Intent i = new Intent(getActivity(), MainActivity.class);
                             getActivity().startActivity(i);
-                        }
+                        }*/
+
+                if (position == 0) {
+
+                    Intent intent = new Intent(getActivity(), Aile_Laats.class);
+                    getActivity().startActivity(intent);
+                }
+
                 if (position == 1) {
                    
                             Intent intent = new Intent(getActivity(), Ain_Veskivali.class);
