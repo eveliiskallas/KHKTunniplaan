@@ -6,6 +6,8 @@
 
     </uses-permission>
 
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ikoon"
@@ -571,7 +573,6 @@
         <activity android:name=".TeacherActivity" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".Settings" >
-
 
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
