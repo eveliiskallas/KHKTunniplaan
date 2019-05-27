@@ -57,6 +57,7 @@ public class Settings extends AppCompatActivity {
                 .putBoolean("isFirstRun", false).apply();
 
 
+
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.container, new Setting_btn());
         fragmentTransaction.commit();
